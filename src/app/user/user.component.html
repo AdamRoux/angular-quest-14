@@ -1,0 +1,36 @@
+<form >
+    <div>
+        <label>
+          Username:
+            <input type="text" [formControl]="username">
+        </label>
+      </div>
+    
+    <div>
+        <label>
+          Email:
+            <input type="email" [formControl]="email">
+        </label>
+      </div>
+    <div>
+        <label>
+          Password:
+            <input type="password" [formControl]="password">
+        </label>
+      </div>
+    <div>
+        <label>
+          Address:
+            <input type="text" [formControl]="address">
+        </label>
+      </div>
+      <div>
+          <button type="button" (click)='newUser()' >INSCRIPTION</button>
+      </div><br>
+      <div *ngIf='isSubmitted'>
+          Username: {{username.value}} <br>
+          Email: {{email.value}} <br>
+          Password: {{password.value}} <br>
+          Address: {{address.value}}
+      </div>
+</form>
